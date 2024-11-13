@@ -1,0 +1,31 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100dvh;
+  margin: 0 5%;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.login-input {
+  position: relative;
+  border: 1px solid var(--light-color);
+  background: var(--dark-color);
+  padding: 12px 20px;
+  color: var(--light-color);
+  width: 440px;
+  ::placeholder {
+    color: var(--light-color);
+    opacity: .75;
+  }
+}
+.login-button {
+  width: 480px;
+  margin-top: 20px;
+}
