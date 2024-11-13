@@ -29,3 +29,29 @@
   width: 480px;
   margin-top: 20px;
 }
+.input-password {
+  position: relative;
+}
+.password-switcher {
+  position: absolute;
+  right: 20px;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 10;
+  background-color: transparent;
+  border: none;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+
+  }
+  &:active {
+    transform: translate(0);
+  }
+}

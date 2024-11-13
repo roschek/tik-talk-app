@@ -4,9 +4,11 @@
     Telegram username
   <input formControlName="username" type="text" placeholder="Input username" class="login-input">
   </label>
-  <label>
+  <label class="input-password">
     Pasword
-    <input formControlName="password" type="password" placeholder="Input password" class="login-input">
+    <input formControlName="password" [type]="isPasswordVisible() ? 'text' : 'password'" placeholder="Input password" class="login-input">
+    <button class="password-switcher" (click)="isPasswordVisible.set(!isPasswordVisible())" ><img src="assets/svg/eye.svg" alt="eye" ></button>
+
   </label>
   <button class="login-button">Login</button>
 </form>

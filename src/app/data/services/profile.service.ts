@@ -12,4 +12,7 @@ baseURL = 'https://icherniakov.ru/yt-course/';
   getTestAccounts() {
     return this.http.get<Profile[]>(`${this.baseURL}account/test_accounts`);
   }
+  getMyProfile() {
+    return this.http.get<Profile>(`${this.baseURL}account/me`);
+  }
 }

@@ -52,6 +52,12 @@ button {
   &:hover:before {
     background-color: transparent;
   }
+  &:active {
+    transform: translateY(4px);
+    background-color: var(--dark-color);
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+  }
 }
 .mb-60 {
   margin-bottom: 60px;

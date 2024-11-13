@@ -15,7 +15,7 @@ import {Profile} from '../../data/interfaces/profile.interface';
 export class SearchPageComponent {
   profileService = inject(ProfileService)
   profiles: Profile[] =[];
-  constructor(){
+    constructor(){
     this.profileService.getTestAccounts().subscribe((data: Profile[]) => this.profiles = data);
   }
 }
