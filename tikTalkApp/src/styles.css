@@ -1,0 +1,26 @@
+:root {
+  --dark-color: #000000;
+  --light-color: #ffffff;
+  --primary-color: #AE7AFF;
+}
+
+body {
+  background-color: var(--dark-color);
+}
+p, span , h1, h2, h3, h4, h5, h6 {
+  color: var(--light-color);
+  margin: 0;
+  padding: 0;
+  font-family: JetBrains Mono, monospace;
+}
+button {
+  font-family: JetBrains Mono, monospace;
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
