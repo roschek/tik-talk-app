@@ -1,1 +1,33 @@
-<p>sidebar works!</p>
+<aside class="sidebar">
+  <img src="assets/svg/menuLogo.svg" alt="logo" class="sidebar-logo">
+  <ul class="sidebar-menu_list">
+  @for(item of menuItems; track item.label){
+      <li>
+        <a class="sidebar-menu_item" [routerLink]="item?.path">
+          <svg [icon]="item.icon" width="16" height="16"></svg>
+          {{item.label}}
+          <span></span>
+        </a>
+      </li>
+  }
+  </ul>
+  <p class="sidebar-subscribers mb-20">Subscribers</p>
+  @for (profile of subscribers$ | async; track profile.id){
+    <app-subscriber-card [profile]="profile"></app-subscriber-card>
+  }
+  <div class="to-subscribers">
+    <a [routerLink]="['/subscribers']"  class="to-subscribers__link">All subscribers</a>
+  </div>
+  <footer class="sidebar-footer mb-20">
+    <a [routerLink]="['/profile']" class="sidebar-footer__profile">
+      @if (myProfile$?.avatarUrl) {
+
+      <img [src]="myProfile$?.avatarUrl | imgUrl" width="24" height="24">
+      } @else {
+      <img src="assets/images/defaultAvatar.png" width="24" height="24">
+      }
+      <span>{{myProfile$?.firstName}} {{myProfile$?.lastName}}</span>
+      <svg icon="settings" width="16" height="16"></svg>
+    </a>
+  </footer>
+</aside>

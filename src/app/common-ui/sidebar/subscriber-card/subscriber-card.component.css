@@ -1,0 +1,12 @@
+.subscribe-card-wrapper {
+  display: grid;
+  grid-template-columns: 32px max-content;
+  grid-gap: 16px;
+  margin-left: 20px;
+  align-items: center;
+  & > img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+}

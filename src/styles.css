@@ -3,11 +3,14 @@
   --light-color: #ffffff;
   --primary-color: #AE7AFF;
   --grey-color: #5F646D;
+  --hover-color: #161616;
 }
 
 body {
   background-color: var(--dark-color);
   background-image: url(/assets/images/background.png);
+  margin: 0;
+  padding: 0;
 }
 p, span , h1, h2, h3, h4, h5, h6, label {
   color: var(--light-color);
@@ -19,6 +22,10 @@ label {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+a {
+  text-decoration: none;
+  font-family: JetBrains Mono, monospace;
 }
 h1 {
   font-size: 48px;
@@ -61,4 +68,10 @@ button {
 }
 .mb-60 {
   margin-bottom: 60px;
+}
+.mb-40 {
+  margin-bottom: 40px;
+}
+.mb-20 {
+  margin-bottom: 20px;
 }
