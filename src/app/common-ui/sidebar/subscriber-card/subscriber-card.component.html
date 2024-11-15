@@ -1,4 +1,4 @@
-<div class="subscribe-card-wrapper">
+<a class="subscribe-card-wrapper" [routerLink]="'/profile/' + profile.id">
   <img [src]="profile.avatarUrl | imgUrl" alt="avatar">
   <p>{{profile.firstName}} {{profile.lastName}}</p>
-</div>
+</a>

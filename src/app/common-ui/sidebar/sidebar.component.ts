@@ -26,7 +26,7 @@ import {ImgUrlPipe} from '../../helpers/pipes/img-url.pipe';
 })
 export class SidebarComponent {
   menuItems: MenuItem[] = [
-    {icon: 'home', label: 'Home'},
+    {icon: 'home', label: 'Home', path: '/profile/me'},
     {icon: 'chat', label: 'Chats'},
     {icon: 'search', label: 'Search', path: '/'}];
   profileService = inject(ProfileService);

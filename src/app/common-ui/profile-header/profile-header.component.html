@@ -1,0 +1,46 @@
+@if(profile$ | async; as profile) {
+<div class="my-profile mb-60">
+ @if (profile.avatarUrl) {
+   <img [src]="profile.avatarUrl  | imgUrl" alt="profile Avatar" class="my-profile-avatar">
+ } @else {
+    <img src="assets/images/defaultAvatar.png" alt="profile Avatar" class="my-profile-avatar">
+ }
+  <div class="profile-info">
+    <h1 class="my-profile-header">{{ profile.firstName }} {{ profile.lastName }}</h1>
+    <p>{{ profile.username }}</p>
+
+</div>
+</div>
+<button class="my-profile__button mb-20">Edit profile</button>
+<h2 class="mb-20">Subsctibers</h2>
+  @if (subscribers$ | async; as subscribers) {
+    @if (subscribers !== null) {
+      <div class="subscribers-wrapper mb-20">
+    @for(subscriber of subscribers; track subscriber.id) {
+      <a class="subscribe-card-wrapper" [routerLink]="'/profile/' + subscriber.id">
+        @if (subscriber.avatarUrl) {
+          <img [src]="subscriber.avatarUrl | imgUrl" alt="avatar" class="subscriber-avatar">
+        } @else {
+          <img src="assets/images/defaultAvatar.png" alt="avatar" class="subscriber-avatar">
+        }
+
+      </a>
+    }
+        <a [routerLink]="'/'">
+          <div class="profile-card-add"></div></a>
+      </div>
+    }
+  }
+  <h2 class="mb-20">Scills</h2>
+  <div class="subscribers-wrapper mb-20">
+  @for (skill of profile.stack; track skill) {
+    <div class="skill-card">
+      <p>{{ skill }}</p>
+    </div>
+  }
+  </div>
+  <h2 class="mb-20">About me</h2>
+  <p>{{profile.description}}</p>
+} @else {
+  <p>No data</p>
+}

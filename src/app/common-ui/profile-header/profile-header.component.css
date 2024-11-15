@@ -1,0 +1,60 @@
+.my-profile {
+  padding: 0 24px 24px 24px;
+  border-bottom: 1px dotted var(--light-color);
+  display: flex;
+  gap: 24px;
+  max-height: 124px;
+}
+.my-profile-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+}
+.my-profile-header {
+  font-size: 24px;
+  white-space: nowrap;
+}
+.subscriber-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+.subscribers-wrapper{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.skill-card {
+  padding: 6px 4px;
+  width: max-content;
+  border: 1px solid var(--light-color);
+  border-radius: 2px;
+  font-size: 14px;
+}
+.profile-card-add {
+  display: block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  cursor: pointer;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    height: 24px;
+    width:4px;
+    right: 14px;
+    background-color: var(--dark-color);
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    height: 4px;
+    width: 24px;
+    right: 4px;
+    background-color: var(--dark-color);
+  }
+}
